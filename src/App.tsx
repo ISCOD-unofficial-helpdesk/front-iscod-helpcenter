@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+// scss
+import "./assets/scss/theme.scss";
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+//Route
+import Routes from "./routes";
 
-export default App
+// Import Firebase Configuration file
+// import { initFirebaseBackend } from "./helpers/firebase_helper";
+
+// api config
+// import config from "./config";
+import fakeBackend from "./helpers/fakeBackend";
+
+// TODO
+fakeBackend();
+
+// const firebaseConfig = {
+//   apiKey: config.FIRE_BASE.API_KEY,
+//   authDomain: config.FIRE_BASE.AUTH_DOMAIN,
+//   databaseURL: config.FIRE_BASE.DATABASEURL,
+//   projectId: config.FIRE_BASE.PROJECTID,
+//   storageBucket: config.FIRE_BASE.STORAGEBUCKET,
+//   messagingSenderId: config.FIRE_BASE.MESSAGINGSENDERID,
+//   appId: config.FIRE_BASE.APPID,
+//   measurementId: config.FIRE_BASE.MEASUREMENTID,
+// };
+
+// // init firebase backend
+// initFirebaseBackend(firebaseConfig);
+
+const App = () => {
+  document.title = "ISCOD - HELPDESK"
+
+  return <Routes />;
+};
+
+export default App;
