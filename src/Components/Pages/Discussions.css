@@ -1,0 +1,30 @@
+/* Discussions.css */
+
+.discussionsContainer {
+    width: 30%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    overflow-y: auto; 
+    height: 90vh; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
+  .discussionList {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+  }
+  
+  .discussionItem {
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .discussionItem:hover {
+    background-color: #808080;
+  }
+  
